@@ -62,16 +62,16 @@ describe('objLib', function () {
         })
 
         it('should return false if the object inside is different', function () {
-            const obj1 = {
-                foo: 'bar',
-                bar: { foo: 'bar' }
+            const obj3 = {
+                foo: 'bat',
+                bar: { blerg: 'bab', grey: 'blue' }
             }
-            const obj2 = {
-                bar: { foo: 'baz' },
+            const obj4 = {
+                bar: { blerg: 'baz', purp: 'le' },
                 foo: 'bar'
             }
             // expect to throw
-            expect(objLib.deepEqual(obj1, obj2)).to.equal(false)
+            expect(objLib.deepEqual(obj3, obj4)).to.equal(false)
         })
 
     })
