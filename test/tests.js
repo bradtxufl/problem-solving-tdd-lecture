@@ -1,6 +1,6 @@
 const expect = chai.expect
 
-// const json = 
+// const json =
 
 describe('objLib', function () {
 
@@ -55,6 +55,19 @@ describe('objLib', function () {
             }
             const obj2 = {
                 bar: 'baz',
+                foo: 'bar'
+            }
+            // expect to throw
+            expect(objLib.deepEqual(obj1, obj2)).to.equal(false)
+        })
+
+        it('should return false if the object inside is different', function () {
+            const obj1 = {
+                foo: 'bar',
+                bar: { foo: 'bar' }
+            }
+            const obj2 = {
+                bar: { foo: 'baz' },
                 foo: 'bar'
             }
             // expect to throw

@@ -22,7 +22,11 @@ var objLib = {
             if (sortedObj1keys[i] !== sortedObj2Keys[i]) {
                 return false
             }
-            // verify values HERE
+            if ((typeof sortedObj1keys[i] === 'object') || (typeof sortedObj1keys[i] === 'function')) {
+                return objLib.deepEqual(sortedObj1keys[i] , sortedObj2Keys[i])
+            } else {
+              return true;
+            }
         }
         return true
     }
