@@ -61,24 +61,6 @@ describe('objLib', function () {
             expect(objLib.deepEqual(obj1, obj2)).to.equal(false)
         })
 
-        it('should return true if all the keys are the same and all the values are the same and are primitive types', function () {
-            const obj1 = {
-                foo: 8,
-                bar: false
-            }
-            const obj2 = {
-                foo: 8,
-                bar: false
-            }
-            // expect to throw
-            expect(objLib.deepEqual(obj1, obj2)).to.equal(true)
-        })
-
-
-
-
-
-
     })
 
 })
